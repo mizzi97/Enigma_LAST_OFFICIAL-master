@@ -3,6 +3,7 @@ package com.example.ricca.enigma;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -100,66 +101,169 @@ public class Crypt_decrypt extends AppCompatActivity {
     }
     //Per usare la tastiera
     public void openEnigma(View view){
+        final MediaPlayer mp = MediaPlayer.create(this,R.raw.suono_pulsante);
         switch (view.getId()){
-            case R.id.bttA:
+            case R.id.bttA: {
                 Enigma_heart(1);
-                break;  //chiama funzione per cifrare
-            case R.id.bttB:
-                Enigma_heart(2); break;
-            case R.id.bttC:
-                Enigma_heart(3); break;
-            case R.id.bttD:
-                Enigma_heart(4); break;
-            case R.id.bttE:
-                Enigma_heart(5); break;
-            case R.id.bttF:
-                Enigma_heart(6); break;
-            case R.id.bttG:
-                Enigma_heart(7); break;
-            case R.id.bttH:
-                Enigma_heart(8); break;
-            case R.id.bttI:
-                Enigma_heart(9); break;
-            case R.id.bttJ:
-                Enigma_heart(10); break;
-            case R.id.bttK:
-                Enigma_heart(11); break;
-            case R.id.bttL:
-                Enigma_heart(12); break;
-            case R.id.bttM:
-                Enigma_heart(13); break;
-            case R.id.bttN:
-                Enigma_heart(14); break;
-            case R.id.bttO:
-                Enigma_heart(15); break;
-            case R.id.bttP:
-                Enigma_heart(16); break;
-            case R.id.bttQ:
-                Enigma_heart(17); break;
-            case R.id.bttR:
-                Enigma_heart(18); break;
-            case R.id.bttS:
-                Enigma_heart(19); break;
-            case R.id.bttT:
-                Enigma_heart(20); break;
-            case R.id.bttU:
-                Enigma_heart(21); break;
-            case R.id.bttV:
-                Enigma_heart(22); break;
-            case R.id.bttW:
-                Enigma_heart(23); break;
-            case R.id.bttX:
-                Enigma_heart(24); break;
-            case R.id.bttY:
-                Enigma_heart(25); break;
-            case R.id.bttZ:
-                Enigma_heart(26); break;
+                mp.start();
+                break;
+            }//chiama funzione per cifrare
+            case R.id.bttB: {
+                Enigma_heart(2);
+                mp.start();
+                break;
+            }
+            case R.id.bttC: {
+                Enigma_heart(3);
+                mp.start();
+                break;
+            }
+            case R.id.bttD: {
+                Enigma_heart(4);
+                mp.start();
+                break;
+            }
+            case R.id.bttE: {
+                Enigma_heart(5);
+                mp.start();
+                break;
+            }
+            case R.id.bttF: {
+                Enigma_heart(6);
+                mp.start();
+                break;
+            }
+            case R.id.bttG: {
+                Enigma_heart(7);
+                mp.start();
+                break;
+            }
+            case R.id.bttH: {
+                Enigma_heart(8);
+                mp.start();
+                break;
+            }
+            case R.id.bttI: {
+                Enigma_heart(9);
+                mp.start();
+                break;
+            }
+            case R.id.bttJ: {
+                Enigma_heart(10);
+                mp.start();
+                break;
+            }
+            case R.id.bttK: {
+                Enigma_heart(11);
+                mp.start();
+                break;
+            }
+            case R.id.bttL: {
+                Enigma_heart(12);
+                mp.start();
+                break;
+            }
+            case R.id.bttM: {
+                Enigma_heart(13);
+                mp.start();
+                break;
+            }
+            case R.id.bttN: {
+                Enigma_heart(14);
+                mp.start();
+                break;
+            }
+            case R.id.bttO: {
+                Enigma_heart(15);
+                mp.start();
+                break;
+            }
+            case R.id.bttP: {
+                Enigma_heart(16);
+                mp.start();
+                break;
+            }
+            case R.id.bttQ: {
+                Enigma_heart(17);
+                mp.start();
+                break;
+            }
+            case R.id.bttR: {
+                Enigma_heart(18);
+                mp.start();
+                break;
+            }
+            case R.id.bttS: {
+                Enigma_heart(19);
+                mp.start();
+                break;
+            }
+            case R.id.bttT: {
+                Enigma_heart(20);
+                mp.start();
+                break;
+            }
+            case R.id.bttU: {
+                Enigma_heart(21);
+                mp.start();
+                break;
+            }
+            case R.id.bttV: {
+                Enigma_heart(22);
+                mp.start();
+                break;
+            }
+            case R.id.bttW: {
+                Enigma_heart(23);
+                mp.start();
+                break;
+            }
+            case R.id.bttX: {
+                Enigma_heart(24);
+                mp.start();
+                break;
+            }
+            case R.id.bttY: {
+                Enigma_heart(25);
+                mp.start();
+                break;
+            }
+            case R.id.bttZ: {
+                Enigma_heart(26);
+                mp.start();
+                break;
+            }
         }
     }
 
     public void Enigma_heart(int index) {
         crypt_preferences=getSharedPreferences(CRYPTPREFERENCES,Context.MODE_PRIVATE);
-
+        ImageView A= findViewById(R.id.A);
+        ImageView B =findViewById(R.id.B);
+        ImageView C =findViewById(R.id.C);
+        ImageView D =findViewById(R.id.D);
+        ImageView E =findViewById(R.id.E);
+        ImageView F =findViewById(R.id.F);
+        ImageView G = findViewById(R.id.G);
+        ImageView H =findViewById(R.id.H);
+        ImageView I =findViewById(R.id.I);
+        ImageView J =findViewById(R.id.J);
+        ImageView K =findViewById(R.id.K);
+        ImageView L =findViewById(R.id.L);
+        ImageView M =findViewById(R.id.M);
+        ImageView N =findViewById(R.id.N);
+        ImageView O =findViewById(R.id.O);
+        ImageView P =findViewById(R.id.P);
+        ImageView Q =findViewById(R.id.Q);
+        ImageView r =findViewById(R.id.R);
+        ImageView S =findViewById(R.id.S);
+        ImageView T =findViewById(R.id.T);
+        ImageView U =findViewById(R.id.U);
+        ImageView V =findViewById(R.id.V);
+        ImageView W =findViewById(R.id.W);
+        ImageView X =findViewById(R.id.X);
+        ImageView Y =findViewById(R.id.Y);
+        ImageView Z=findViewById(R.id.Z);
         String result;
         int starting=index;
 
@@ -244,9 +348,189 @@ public class Crypt_decrypt extends AppCompatActivity {
             SharedPreferences.Editor editor=crypt_preferences.edit();
             if(i<100){
                 result=String.valueOf(letters[index-1]);
-                int resID = getResources().getIdentifier("result", "id", getPackageName());
-                ImageView bulb = findViewById(resID);
-                bulb.setVisibility(View.VISIBLE);
+                if(result.equals("A"))
+               {
+                   A.setVisibility(View.VISIBLE);
+                   ImageView images[]={B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                   for (ImageView view : images)
+                       view.setVisibility(View.INVISIBLE);
+               }
+               if(result.equals("B"))
+                {
+                    B.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("C"))
+                {
+                    C.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+
+                }
+                if(result.equals("D"))
+                {
+                  D.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("E"))
+                {
+                    E.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("F"))
+                {
+                    F.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("G"))
+                {
+                    G.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("H"))
+                {
+                   H.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("I"))
+                {
+                    I.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("J"))
+                {
+                    J.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("K"))
+                {
+                    K.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("L"))
+                {
+                    L.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("M"))
+                {
+                    M.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("N"))
+                {
+                    N.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("O"))
+                {
+                    O.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("P"))
+                {
+                   P.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("Q"))
+                {
+                    Q.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("R"))
+                {
+                   r.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("S"))
+                {
+                    S.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("T"))
+                {
+                    T.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("U"))
+                {
+                  U.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("V"))
+                {
+                    V.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("W"))
+                {
+                    W.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("X"))
+                {
+                    X.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("Y"))
+                {
+                   Y.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("Z"))
+                {
+                    Z.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
                 i= (byte) (i+1);
                 editor.putString("original_text_key",String.format("%s%s",crypt_preferences.getString("original_text_key",""), String.valueOf(letters[starting-1])));
                 editor.putString("decrypted_text2_key",String.format("%s%s", crypt_preferences.getString("decrypted_text2_key",""), result));
@@ -263,6 +547,189 @@ public class Crypt_decrypt extends AppCompatActivity {
             SharedPreferences.Editor editor=crypt_preferences.edit();
             if(i<100&&(i%5==0)&&i!=0){
                 result=String.valueOf(letters[index-1]);
+                if(result.equals("A"))
+                {
+                    A.setVisibility(View.VISIBLE);
+                    ImageView images[]={B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("B"))
+                {
+                    B.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("C"))
+                {
+                    C.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+
+                }
+                if(result.equals("D"))
+                {
+                    D.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("E"))
+                {
+                    E.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("F"))
+                {
+                    F.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("G"))
+                {
+                    G.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("H"))
+                {
+                    H.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("I"))
+                {
+                    I.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("J"))
+                {
+                    J.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("K"))
+                {
+                    K.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("L"))
+                {
+                    L.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("M"))
+                {
+                    M.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("N"))
+                {
+                    N.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("O"))
+                {
+                    O.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("P"))
+                {
+                    P.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("Q"))
+                {
+                    Q.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("R"))
+                {
+                    r.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("S"))
+                {
+                    S.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("T"))
+                {
+                    T.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("U"))
+                {
+                    U.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("V"))
+                {
+                    V.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("W"))
+                {
+                    W.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("X"))
+                {
+                    X.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("Y"))
+                {
+                    Y.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("Z"))
+                {
+                    Z.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
                 i= (byte) (i+1);
                 editor.putString("original_text_key",String.format("%s%s",crypt_preferences.getString("original_text_key",""), String.valueOf(letters[starting-1])));
                 editor.putString("crypted_text2_key",String.format("%s %s",crypt_preferences.getString("crypted_text2_key",""), result));
@@ -273,6 +740,189 @@ public class Crypt_decrypt extends AppCompatActivity {
             }
             else{
                 result=String.valueOf(letters[index-1]);
+                if(result.equals("A"))
+                {
+                    A.setVisibility(View.VISIBLE);
+                    ImageView images[]={B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("B"))
+                {
+                    B.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("C"))
+                {
+                    C.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+
+                }
+                if(result.equals("D"))
+                {
+                    D.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("E"))
+                {
+                    E.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("F"))
+                {
+                    F.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("G"))
+                {
+                    G.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("H"))
+                {
+                    H.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("I"))
+                {
+                    I.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("J"))
+                {
+                    J.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("K"))
+                {
+                    K.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("L"))
+                {
+                    L.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,M,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("M"))
+                {
+                    M.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,N,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("N"))
+                {
+                    N.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,O,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("O"))
+                {
+                    O.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,P,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("P"))
+                {
+                    P.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,Q,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("Q"))
+                {
+                    Q.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,r,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("R"))
+                {
+                    r.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,S,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("S"))
+                {
+                    S.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,T,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("T"))
+                {
+                    T.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,U,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("U"))
+                {
+                    U.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,V,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("V"))
+                {
+                    V.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,W,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("W"))
+                {
+                    W.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,X,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("X"))
+                {
+                    X.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,Y,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("Y"))
+                {
+                    Y.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Z};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
+                if(result.equals("Z"))
+                {
+                    Z.setVisibility(View.VISIBLE);
+                    ImageView images[]={A,B,C,D,F,G,H,I,J,K,L,M,N,O,P,Q,r,S,T,U,V,W,X,Y};
+                    for (ImageView view : images)
+                        view.setVisibility(View.INVISIBLE);
+                }
                 i= (byte) (i+1);
                 editor.putString("original_text_key",String.format("%s%s",crypt_preferences.getString("original_text_key",""), String.valueOf(letters[starting-1])));
                 editor.putString("crypted_text2_key",String.format("%s%s",crypt_preferences.getString("crypted_text2_key",""), result));
